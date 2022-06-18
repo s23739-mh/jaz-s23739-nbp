@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.client.HttpClientErrorException;
 
-//@RestControllerAdvice
+@RestControllerAdvice
 public class ExcHandler {
     @ExceptionHandler(HttpClientErrorException.NotFound.class )
     public ResponseEntity<String> notFound(HttpClientErrorException.NotFound exception){
